@@ -1,4 +1,4 @@
-const { launches } = require('../../models/launches.model');
+
 const {
     httpGetAllLaunches,
     httpAddNewLaunches,
@@ -13,10 +13,5 @@ launchesRouter.get('/', httpGetAllLaunches);
 
 launchesRouter.post('/', httpAddNewLaunches);
 
-function getAllLaunches() {
-    return Array.from(launches.values());
-}
 
-module.exports = {
-    getAllLaunches,
-};
+module.exports = launchesRouter
